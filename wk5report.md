@@ -35,23 +35,22 @@ cat types.txt
 find written_2/ -size 2k > names.txt
 cat names.txt
 ```
-![image](https://raw.githubusercontent.com/cheahfulnic/lab5/main/wk5-ss/week5-5.png)
+![image](https://raw.githubusercontent.com/cheahfulnic/lab5/main/wk5-ss/week5-6.png)
 ```
 find written_2/ -size -2k > sizes.txt
 cat sizes.txt
 ```
-![image](https://raw.githubusercontent.com/cheahfulnic/lab5/main/wk5-ss/week5-6.png)
+![image](https://raw.githubusercontent.com/cheahfulnic/lab5/main/wk5-ss/week5-5.png)
 * The -size parameter allows users to search for files in the directory /path/to/directory whose size is equal to [num] bytes, kilobytes (k), megabytes (M), or gigabytes (G). + or - can be used before the num to indicate more than or less than. The output redirection sign, >, and cat is used to display the files.
 
 
 ## find /path/to/directory -exec command {} \;
 ```
-find written_2/ -size -2k > sizes.txt
-cat sizes.txt
+find written_2/ -type d -exec echo {} \;
 ```
 ![image](https://raw.githubusercontent.com/cheahfulnic/lab5/main/wk5-ss/week5-7.png)
 ```
-find written_2/ -name "ch*.txt" > names.txt
+find written_2/ -type f -exec echo {} \;
 cat names.txt
 ```
 ![image](https://raw.githubusercontent.com/cheahfulnic/lab5/main/wk5-ss/week5-8.png)
